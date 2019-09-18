@@ -1,9 +1,10 @@
 var hoursArray = ['6 am - ','7 am - ','8 am - ','9 am - ','10 am - ','11 am - ','12 pm - ','1 pm - ','2 pm -','3 pm - ','4 pm - ','5 pm - ','6 pm - ','7 pm - ','8 pm - '];
-var cityNames = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var seattle = {
+  cityName: 'Seattle',
   customerMax: 65,
   customerMin: 23,
   avg: 6.3,
@@ -12,7 +13,7 @@ var seattle = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
-    timeLists.textContent = cityNames[0];
+    timeLists.textContent =this.cityName;
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -45,13 +46,11 @@ var seattle = {
     }
   },
 };
-
 console.log(seattle.custPerHour());
 console.log(seattle.cookiesPerHour());
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var tokyo = {
+  cityName: 'Tokyo',
   customerMax: 24,
   customerMin: 3,
   avg: 1.2,
@@ -60,7 +59,7 @@ var tokyo = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
-    timeLists.textContent = cityNames[1];
+    timeLists.textContent =this.cityName;
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -97,6 +96,7 @@ console.log(tokyo.custPerHour());
 console.log(tokyo.cookiesPerHour());
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var dubai = {
+  cityName: 'Dubai',
   customerMax: 38,
   customerMin: 11,
   avg: 3.7,
@@ -105,7 +105,7 @@ var dubai = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
-    timeLists.textContent = cityNames[2];
+    timeLists.textContent =this.cityName;
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -140,8 +140,9 @@ var dubai = {
 };
 console.log(dubai.custPerHour());
 console.log(dubai.cookiesPerHour());
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var paris = {
+  cityName: 'Paris',
   customerMax: 38,
   customerMin: 20,
   avg: 2.3,
@@ -150,7 +151,7 @@ var paris = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
-    timeLists.textContent = cityNames[3];
+    timeLists.textContent =this.cityName;
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -187,6 +188,7 @@ console.log(paris.custPerHour());
 console.log(paris.cookiesPerHour());
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var lima = {
+  cityName: 'Lima',
   customerMax: 16,
   customerMin: 2,
   avg: 4.6,
@@ -195,7 +197,7 @@ var lima = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
-    timeLists.textContent = cityNames[4];
+    timeLists.textContent =this.cityName;
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -230,10 +232,10 @@ var lima = {
 };
 console.log(lima.custPerHour());
 console.log(lima.cookiesPerHour());
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 seattle.render();
 tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
