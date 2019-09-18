@@ -1,4 +1,5 @@
 var hoursArray = ['6 am - ','7 am - ','8 am - ','9 am - ','10 am - ','11 am - ','12 pm - ','1 pm - ','2 pm -','3 pm - ','4 pm - ','5 pm - ','6 pm - ','7 pm - ','8 pm - '];
+var cityNames = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -11,6 +12,7 @@ var seattle = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
+    timeLists.textContent = cityNames[0];
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -58,6 +60,7 @@ var tokyo = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
+    timeLists.textContent = cityNames[1];
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -102,6 +105,7 @@ var dubai = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
+    timeLists.textContent = cityNames[2];
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -146,6 +150,7 @@ var paris = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
+    timeLists.textContent = cityNames[3];
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
@@ -190,6 +195,7 @@ var lima = {
   render: function(){
     var salesData = document.getElementById('salesData');
     var timeLists = document.createElement('ul');
+    timeLists.textContent = cityNames[4];
     for(var i = 0; i < hoursArray.length; i++){
       var timeOfDay = document.createElement('li');
       timeOfDay.textContent = `${hoursArray[i]}${this.cookiesPerHourArray[i]}` ;
