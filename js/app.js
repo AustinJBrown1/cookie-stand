@@ -2,6 +2,7 @@ var hoursArray = [' 6 am  || ',' 7 am || ',' 8 am || ',' 9 am || ',' 10 am || ',
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var seattle = {
   cityName: 'Seattle',
   customerMax: 65,
@@ -22,7 +23,9 @@ var seattle = {
     salesData.appendChild(timeLists);
     //This block of code adds a list item that displays the total amount of cookies bought over the course of the day. It is populated by the "totalCookies" method.
     var total = document.createElement('li');
+
     total.textContent = 'Total || ' + this.totalCookies();
+
     timeLists.appendChild(total);
   },
   custPerHour: function(){
@@ -80,7 +83,10 @@ var tokyo = {
     }
     salesData.appendChild(timeLists);
     var total = document.createElement('li');
+
     total.textContent = 'Total || ' + this.totalCookies();
+
+
     timeLists.appendChild(total);
   },
   custPerHour: function(){
@@ -137,7 +143,9 @@ var dubai = {
     }
     salesData.appendChild(timeLists);
     var total = document.createElement('li');
+
     total.textContent = 'Total || ' + this.totalCookies();
+
     timeLists.appendChild(total);
   },
   custPerHour: function(){
@@ -194,7 +202,9 @@ var paris = {
     }
     salesData.appendChild(timeLists);
     var total = document.createElement('li');
+
     total.textContent = 'Total || ' + this.totalCookies();
+
     timeLists.appendChild(total);
   },
   custPerHour: function(){
@@ -251,7 +261,9 @@ var lima = {
     }
     salesData.appendChild(timeLists);
     var total = document.createElement('li');
+
     total.textContent = 'Total || ' + this.totalCookies();
+
     timeLists.appendChild(total);
   },
   custPerHour: function(){
@@ -296,6 +308,7 @@ dubai.render();
 paris.render();
 lima.render();
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function City(cityName, customerMax, customerMin, avg){
   this.cityName = cityName;
   this.customerMax = customerMax;
@@ -358,3 +371,4 @@ Austin.custPerHour();
 Austin.cookiesPerHour();
 Austin.totalCookies();
 Austin.render();
+ 
